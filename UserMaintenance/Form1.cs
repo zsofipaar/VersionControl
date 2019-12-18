@@ -51,12 +51,12 @@ namespace UserMaintenance
 
             using (StreamWriter sw = new StreamWriter(sfd.FileName))
             {
-                sw.WriteLine("Sorszám Teljes név");
-                int i = 1;
-                foreach (var fn in users)
+                sw.WriteLine("Sorszám          Teljes név");
+                int counter = 0;
+                foreach (var u in users)
                 {
-                    sw.WriteLine(i + "     " + fn);
-                    i++;
+                    sw.WriteLine(u.ID + " " + u.FullName);
+                    counter++;
                 }
             }
         }
